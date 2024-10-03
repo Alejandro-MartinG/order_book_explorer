@@ -6,7 +6,7 @@ import sys
 def get_symbol_data(symbol: str):
     BASE_URL = 'https://api.blockchain.com/v3/exchange'
     url = f"{BASE_URL}/l3/{symbol}"
-    headers = {'Accept': 'application/json'}
+    headers = { 'Accept': 'application/json' }
     response = requests.get(url, headers=headers)
     response.raise_for_status()
     data = response.json()

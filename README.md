@@ -20,16 +20,12 @@ git clone https://github.com/Alejandro-MartinG/order_book_explorer.git
 cd order-book-explorer
 ```
 
-text
-
 2. Crea un entorno virtual y actívalo:
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate # En Windows usa venv\Scripts\activate
 ```
-
-text
 
 3. Instala las dependencias:
 
@@ -78,11 +74,11 @@ Ejemplos:
 ```url
 http://localhost:5000/bids/stats?symbol=BTC-USD
 ```
-```
+```url
 http://localhost:5000/asks/stats?symbol=near-usd
 ```
-```
-http://localhost:5000/general/stat
+```url
+http://localhost:5000/general/stats
 ```
 
 ## Estructura del Proyecto
@@ -95,7 +91,7 @@ order-book-explorer/
 │ ├── services/
 │ │ └── stats_service.py
 │ └── db/
-│ └── db.py
+│   └── db.py
 ├── requirements.txt
 └── README.md
 
@@ -115,7 +111,7 @@ La carga de los datos hace referencia a lo que sería un proceso de ETL, mi dise
 
 Cambios que me habría gustado implementar en este proyecto:
 - **Validación de datos** de la api externa: una validación de tipos contrastada con un contrato por ejemplo en formato .json donde están reflejados los tipos de datos que se deben recibir.
-- Un **serializador** en para realizar ahí la validación de los datos recibidos por la API externa y la conversión a mi modelo de la base de datos junto con el manejo de las posibles excepciones o diferentes respuestas de la API.
+- Un **serializador** para realizar ahí la validación de los datos recibidos por la API externa y la conversión a mi modelo de la base de datos junto con el manejo de las posibles excepciones o diferentes respuestas de la API.
 - El **tipado y manejo de Errores**
 - **Dockerizar** la app
 
