@@ -57,8 +57,8 @@ class StatsService:
         return self._get_order_book_stats(bids_df)
 
     def get_asks_stats(self, symbol):
-        bids_df = self.db.get_bids(symbol=symbol)
-        return self._get_order_book_stats(bids_df)
+        asks_df = self.db.get_asks(symbol=symbol)
+        return self._get_order_book_stats(asks_df)
 
     def get_general_stats(self):
         df = self.db.get_all_data()
